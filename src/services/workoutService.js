@@ -5,9 +5,12 @@ const getAllWorkouts = () => {
   const allWorkouts = Workout.getAllWorkouts();
   return allWorkouts;
 };
-const getWorkoutById = () => {
-  return;
+
+const getWorkoutById = (workoutId) => {
+  const workout = Workout.getWorkoutById(workoutId);
+  return workout;
 };
+
 const createNewWorkout = (newWorkout) => {
   const workoutToInsert = {
     ...newWorkout,
@@ -19,10 +22,14 @@ const createNewWorkout = (newWorkout) => {
   const createdWorkout = Workout.createNewWorkout(workoutToInsert);
   return createdWorkout;
 };
-const updateWorkoutById = () => {
-  return;
+
+const updateWorkoutById = (workoutId, changes) => {
+  const updatedWorkout = Workout.updateWorkoutById(workoutId, changes);
+  return updatedWorkout;
 };
-const deleteWorkoutById = () => {
+
+const deleteWorkoutById = (workoutId) => {
+  Workout.deleteWorkoutById(workoutId);
   return;
 };
 
