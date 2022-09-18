@@ -9,7 +9,6 @@ const getRecordByWorkoutId = (workoutId) => {
         message: `Can't find workout with the id '${workoutId}'`,
       };
     }
-
     return record;
   } catch (error) {
     throw { status: error?.status || 500, message: error?.message || error };
