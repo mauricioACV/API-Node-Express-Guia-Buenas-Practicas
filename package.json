@@ -11,7 +11,8 @@
   "author": "Mauricio Campusano <mauricio.campusano@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "supertest": "^6.3.0"
   },
   "dependencies": {
     "apicache": "^1.6.3",
