@@ -4,8 +4,7 @@ const getAllWorkouts = (req, res) => {
   const {mode} = req.query;
   try {
     const allWorkouts = workoutService.getAllWorkouts({ mode });
-    res.setHeader('Content-Type', 'application/json');
-    res.send({ status: "OK", data: allWorkouts });
+    res.json({ status: "OK", data: allWorkouts });
   } catch (error) {
     res
       .status(error?.status || 500)
@@ -63,7 +62,7 @@ const createNewWorkout = (req, res) => {
   };
   try {
     const createdWorkout = workoutService.createNewWorkout(newWorkout);
-    res.status(201).send({ status: "OK", data: createdWorkout });
+    res.status(201).send({ status: "Created", data: createdWorkout });
   } catch (error) {
     res
       .status(error?.status || 500)
